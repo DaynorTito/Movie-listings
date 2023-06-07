@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Rasa:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top" style="font-size: 150%; background-color: #17202A;">
+        <p class="navbar-brand">
+            <h2 style="font-size: 40px;font-family: 'Ranchers', cursive;"> <i class=" fas fa-film "></i> CINE WEB</h2>
+        </p>
+
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="font-family: 'Baloo Thambi 2', cursive;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="cartelera.html" style="font-family: 'Baloo Thambi 2', cursive;">Cartelera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulario.html" style="font-family: 'Baloo Thambi 2', cursive;">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Fin de carrucel-->
+    <br>
+    <div class="container">
+        <center>
+            <h1 class="text-primary">Cartelera</h1>
+        </center>
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Cruella</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/dysney1.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div style="font-family: 'Baloo Thambi 2', cursive;" class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Todo publico
+                        <br>
+                        <i class="fas fa-film"></i> Comedia
+                        <br>
+                        <i class="far fa-clock"></i> 145 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <br>
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=gmRKv7n2If8" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>EL CONJURO 3</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/conjuro.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Terror
+                        <br>
+                        <i class="far fa-clock"></i> 120 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=6lVpcalyQ9Y " target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>ESPIRAL: EL JUEGO</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/espiral.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Terror
+                        <br>
+                        <i class="far fa-clock"></i> 105 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=j6eSUGv7sH8" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>JUSTICIA IMPLACABLE</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/justicia.jpg" width="195" height="228" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Accion/Suspenso
+                        <br>
+                        <i class="far fa-clock"></i> 130 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=D7E942Cw4Ak" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Peter Rabbit 2</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/peeter.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Todo Publico <br>
+                        <i class="fas fa-film"></i> Comedia/Familiar
+                        <br>
+                        <i class="far fa-clock"></i> 105 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D/3D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=vnzDIL44AA0&t=29s" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Raya y el dragon</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/raya.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Todo publico
+                        <br>
+                        <i class="fas fa-film"></i> Animacion
+                        <br>
+                        <i class="far fa-clock"></i> 125 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=aQFHKzN-yw0&t=24s" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Ruega Por Nosotros</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/nosotros.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Terror
+                        <br>
+                        <i class="far fa-clock"></i> 110 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D/3D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=oxxPde95ajw" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Terror En Altamar</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/terror.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Terror
+                        <br>
+                        <i class="far fa-clock"></i> 105 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=Ai8SXeaYPC0" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Lugar En Silencio</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/lugar.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14
+                        <br>
+                        <i class="fas fa-film"></i> Drama
+                        <br>
+                        <i class="far fa-clock"></i> 110 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=0aJIudUnXik" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Demon Slayer</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/demon.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Todo público
+                        <br>
+                        <i class="fas fa-film"></i> Animacion
+                        <br>
+                        <i class="far fa-clock"></i> 130 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=-AwLMRgcEoA" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Dino Dana</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/dino.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Todo Publico
+                        <br>
+                        <i class="fas fa-film"></i> Fantastico/Aventura
+                        <br>
+                        <i class="far fa-clock"></i> 90 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=O6UVhRJinxg" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <br>
+                <div class="card">
+                    <div class="card-header alert alert-info">
+                        <h4>
+                            <center>Exorcismo del septimo dia</center>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                            <img src="img/septimo.jpg" width="195" height="225" alt="">
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-volume-up"></i> Español
+                        <br>
+                        <i class="fas fa-user"></i> Mayores de 14 años
+                        <br>
+                        <i class="fas fa-film"></i> Terror
+                        <br>
+                        <i class="far fa-clock"></i> 100 min
+                        <br>
+                        <i class="fas fa-video"></i> 2D/3D
+                        <div class="col text-center">
+                            <a type="button" class="btn btn-sm btn-outline-danger btn-active" href="https://www.youtube.com/watch?v=j-8gV_gLFkE" target="_blank"><i
+                                    class="fab fa-youtube"></i>
+                                Trailer</a>
+                            <a type="button" class="btn btn-sm btn-outline-warning btn-active" data-toggle="modal" data-target="#formulario"><i class="fas fa-ticket-alt"></i>Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <center>
+                <h3 style="font-family: 'Baloo Thambi 2', cursive;">SIGUENOS EN REDES</h3>
+            </center>
+            <p style="font-size: 17px;"> Somos una empresa de entretenimiento familiar. Con las películas de estreno mundial, en 2D, 3D, sonido dolby 7.1 e imagen 4K. Tu experiencia sera única, en nuestros cómodos sillones VIP. </p>
+
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:98px;height:41px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
+                </a>
+            </p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-family: 'Baloo Thambi 2', cursive;">Copyright&copy; 2021 Todos los derechos reservados INF-113. <span>PROYECTO</span></p>
+        </div>
+    </footer>
+    <form action="#">
+        <div class="modal" id="formulario">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            <center>DATOS CLIENTE: </center>
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-warning alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>Si aún no se registro </strong><b><a href="formulario.html"> Haz click Aquí</a></b>
+                        </div>
+                        <div class="form-group">
+                            <label for="fn"><span class="text-danger">*</span> Ingrese Usuario:</label>
+                            <input type="text" class="form-control" id="fn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fn"><span class="text-danger">*</span> Contraseña:</label>
+                            <input type="password" class="form-control" id="lm" required>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <span class="text-danger">(*)Campos Requeridos</span>
+                        <P>
+                            <button type="submit" class="btn btn-info">ENVIAR DATOS</button>
+                            <button type="submit" class="btn btn-danger" data-dismiss="modal">CANCELAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

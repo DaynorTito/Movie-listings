@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Rasa:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            document.formularioDatos.ci.focus();
+            document.formularioDatos.addEventListener('submit', validarFormulario);
+        }
+
+        function validarFormulario(evObject) {
+            evObject.preventDefault();
+            var todoCorrecto = true;
+            var formulario = document.formularioDatos;
+            if (/\d+/.test(formulario.ci.value) == false || isNaN(formulario.ci.value) == true || formulario.ci.value == null) {
+                alert('Ingrese un CI o NIT valido');
+                todoCorrecto = false;
+            }
+            if (/\d+/.test(formulario.paterno.value) == true || /\s+/.test(formulario.paterno.value) == true) {
+                alert('Apellido Parteno no valido');
+                todoCorrecto = false;
+            }
+            if (/\d+/.test(formulario.materno.value) == true || /\s+/.test(formulario.materno.value) == true) {
+                alert('Apellido Materno no valido');
+                todoCorrecto = false;
+            }
+            if (/\d+/.test(formulario.nombres.value) == true || /\s+/.test(formulario.nombres.value) == true) {
+                alert('Nombre no valido');
+                todoCorrecto = false;
+            }
+            if (!(/\S+@\S+\.\S+/.test(formulario.email.value))) {
+                alert('Ingrese un email valido ');
+                todoCorrecto = false;
+            }
+            if (/\d+/.test(formulario.tel_movil.value) == false || isNaN(formulario.tel_movil.value) == true || formulario.tel_movil.value == null) {
+                alert('Ingrese un Telefono movil valido ');
+                todoCorrecto = false;
+            }
+            if (formulario.password_1.value != formulario.password_2.value) {
+                alert('Las contraseñas no coinciden Intente nuevamente ');
+                todoCorrecto = false;
+            }
+            /*if (formulario.captcha_cod.value == '')*/
+            if (todoCorrecto == true) {
+                formulario.submit();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top" style="font-size: 150%; background-color: #17202A;">
+        <p class="navbar-brand">
+            <h2 style="font-size: 40px;font-family: 'Ranchers', cursive;"> <i class=" fas fa-film "></i> CINE WEB</h2>
+        </p>
+
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html" style="font-family: 'Baloo Thambi 2', cursive;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cartelera.html" style="font-family: 'Baloo Thambi 2', cursive;">Cartelera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="formulario.html" style="font-family: 'Baloo Thambi 2', cursive;">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Fin de carrucel-->
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card" style="border-color: #0080ff;">
+                    <div class="card-header  alert alert-info">
+                        <div class="box-header">
+                            <h3 class="box-title"><i class="fas fa-file-alt"></i> Formulario de Registro</h3>
+                        </div>
+                    </div>
+                    <div class="card-shadow">
+                        <div class="col-sm-12">
+                            <div class="box box-primary box-solid">
+
+                                <div id="demo" class="collapse show">
+                                    <form action="registro.php" name="formularioDatos">
+                                        <div class="box-body">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="ci">Nro. Documento de Identidad o NIT<span
+                                                                style="color:red">*
+                                                            </span></label><button type="button" class="btn btn-ttip btn-sm" data-toggle="tooltip"></button>
+                                                        <input type="text" class=":integer :min_length;5 :max_length;8 :required form-control" name="ci" id="ci" placeholder="Ingresar CI o NIT" value="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="exp_depto">Expedido en: <span style="color:red">*
+                                                            </span></label><button type="button" class="btn btn-ttip btn-sm" data-toggle="tooltip"></button>
+                                                        <select name="exp_depto" class="form-control" id="exp_depto" required="">
+                                                            <option value="" selected="selected">Seleccione el
+                                                                departamento
+                                                            </option>
+                                                            <option value="1">CHUQUISACA</option>
+                                                            <option value="2">LA PAZ</option>
+                                                            <option value="3">COCHABAMBA</option>
+                                                            <option value="4">ORURO</option>
+                                                            <option value="5">POTOSI</option>
+                                                            <option value="6">TARIJA</option>
+                                                            <option value="7">SANTA CRUZ</option>
+                                                            <option value="8">BENI</option>
+                                                            <option value="9">PANDO</option>
+                                                            <option value="26">EXTRANJERO</option>
+                                                            <option value="33">OTROS</option>
+                                                            <option value="34">SIN DEFINIR</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="paterno">Apellido Paterno <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="text" style="text-transform: uppercase" class="form-control" name="paterno" id="paterno" placeholder="Ingresar apellido paterno" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="materno">Apellido Materno <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="text" style="text-transform: uppercase" class="form-control" name="materno" id="materno" placeholder="Ingresar apellido materno" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="nombres">Nombres <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="text" style="text-transform: uppercase" class=":required form-control" name="nombres" id="nombres" placeholder="Ingresar nombres" value="" required="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-sm-4">
+                                                    <div class="form-group">
+                                                        <label for="ciudad_vive">Ciudad donde vive</label>
+                                                        <select name="ciudad_vive" class=":required form-control" id="ciudad_vive" required="">
+                                                            <option value="" selected="selected">Seleccione la ciudad
+                                                            </option>
+                                                            <option value="1">LA PAZ</option>
+                                                            <option value="2">SANTA CRUZ</option>
+                                                            <option value="3">COCHABAMBA</option>
+                                                            <option value="4">ORURO</option>
+                                                            <option value="5">POTOSI</option>
+                                                            <option value="6">TARIJA</option>
+                                                            <option value="7">CHUQUISACA</option>
+                                                            <option value="8">BENI</option>
+                                                            <option value="9">PANDO</option>
+                                                            <option value="10">OTROS</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="fec_nacimiento">Fecha de Nacimiento <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="date" class=":required form-control" name="fec_nacimiento" id="fec_nacimiento" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="sexo">Sexo <span
+                                                                style="color:red">*</span></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <br>
+                                                        <input type="radio" name="sexo" id="optionsRadios1" value="M" required=""> Masculino &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <input type="radio" name="sexo" id="optionsRadios2" value="F" required=""> Femenino
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="email">Email personal <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="text" class=":required form-control" name="email" id="email" placeholder="Ingresar email ej: ejemplo@email.com" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="tel_movil">Teléfono Móvil <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="text" class=":integer :min_length;7 :required form-control" name="tel_movil" id="tel_movil" placeholder="Ingresar su numero telefonico" value="" required="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="Contraseña">Ingrese una contraseña <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="password" class=":required form-control" name="password_1" id="password1" placeholder="Cree un contraseña" value="" required="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="tel_movil">Repita la contraseña <span
+                                                                style="color:red">*</span></label>
+                                                        <input type="password" class=":integer :min_length;7 :required form-control" name="password_2" id="password2" placeholder="Repita la contraseña" value="" required="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                    <img src="img/captcha.jpg" width="160" height="60" style="border:0;" alt="captcha">
+                                                    <a href="#" id="new_captcha"> <i class="fa fa-refresh"></i> Refrescar Código</a>
+                                                    <br>
+                                                    <br>
+                                                    <label for="captcha_cod">Ingresar el Código de la imagen <span
+                                                            style="color:red">*</span></label>
+                                                    <input type="text" class=":required form-control" name="captcha_cod" id="captcha_cod" placeholder="Ingresar el Código de la imagen " value="" required="">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <hr>
+                                            <div class="container">
+
+                                                <button type="submit" class="btn btn-info">Registrarse</button>
+                                                <button type="reset" class="btn btn-danger" data-dismiss="modal">Limpiar</button>
+                                            </div>
+
+                                            <br>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form/>
+    <br>
+    <footer>
+        <div class="footer-content">
+            <center>
+                <h3 style="font-family: 'Baloo Thambi 2', cursive;">SIGUENOS EN REDES</h3>
+            </center>
+            <p style="font-size: 17px;"> Somos una empresa de entretenimiento familiar. Con las películas de estreno mundial, en 2D, 3D, sonido dolby 7.1 e imagen 4K. Tu experiencia sera única, en nuestros cómodos sillones VIP. </p>
+
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:98px;height:41px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
+                </a>
+            </p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-family: 'Baloo Thambi 2', cursive;">Copyright&copy; 2021 Todos los derechos reservados INF-113. <span>PROYECTO</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
